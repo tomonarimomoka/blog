@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LG6VXEVGW8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-LG6VXEVGW8');
+  </script>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <header id="articleHader">
+    <h1 id="articleTitle">タイトル</h1>
+    <a href="../index.html" class="btn-flat-border">home</a>
+  </header>
+  <main class="box">
+    🕓本記事の最終更新日は
+    <time id="modify"></time>
+    です。
+    <script>
+      /* 更新日の取得 */
+      const last = new Date(document.lastModified);
+      const year = last.getFullYear();
+      const month = last.getMonth() + 1;
+      const date = last.getDate();
+      /* 日付を書き換える */
+      const target = document.getElementById('modify');
+      target.textContent = year + '-' + month + '-' + date;
+    </script>
+    <h2 class="sectionTitleLine">私のスペック</h2>
+    <p>
+    ・ぴよぴよ新卒🐤</br>
+    ・学生自体プログラマーのバイトでC#使ってた</br>
+    ・一浪日大（物覚えは少し悪め...）
+    </p>
+    <h2 class="sectionTitleLine">使った教材</h2>
+      <p>以下の2つだけです。<br>
+      ・<a href="https://amzn.asia/d/8J109FA">黒本</a></br>
+      ・2021 , <a href="https://oha-yo.com/oracle/ouioracle-universal-installer-19c/">OUI（Oracle Universal Installer）でのインストール</a></br>
+      <br>
+      ・2022 , <a href="https://oha-yo.com/oracle/oracle19c_install/">Oracle Linux 8.5へOracle19cをインストール</a></br>
+      <br>
+    </p>
+
+    <h2 class="sectionTitleLine">WindowsでLinuxを動かす</h2>
+    <ol>
+      <li>
+        <a href="https://hazuki--blog.com/linux-ubuntu-install-windowspc/">Windows PCでLinuxを動かす</a>
+        も参考にWindowsでLinux(ubuntu)を使えるようにする</li>
+      <li><a href="https://www.oracle.com/jp/database/free/get-started/">無料版Oracle Databaseダウンロードページ</a>
+          よりダウンロードURLをコピー
+      </li>
+      <li><a href="https://weblabo.oscasierra.net/linux-file-download/">LinuxコマンドでWEBからファイルをダウンロードする方法 </a>
+        を見てLinux環境に手順2でコピーした無料版Oracle Databaseをインストール</li>
+    </ol>
+    <p>
+      黒本ではLinuxで解説されるので、
+      <a href="https://xtech.nikkei.com/atcl/nxt/column/18/01937/020100001/">Windows 11の標準機能でLinuxを動かす方法</a>
+      を参照て自分のPCでもLinuxを使えるようにしました。
+      <a herf="https://hazuki--blog.com/linux-ubuntu-install-windowspc/">【2023年版】Ubuntuのインストール方法を解説~Windows PCでLinuxを動かす~</a>
+      も参考にしました。
+      無料版のOracle Databaseを使いたかったので<a href="https://cosol.jp/techdb/2019/05/use_oracle_database_no_charge/">Oracle Databaseを無償で使う方法いろいろ</a>
+      を見てダウンロードURLをコピーしました。
+      
+      <a href="https://weblabo.oscasierra.net/linux-file-download/">LinuxコマンドでWEBからファイルをダウンロードする方法 </a>
+      を見てLinux環境に無料版Oracle Databaseをインストールしました。
+
+      インストールすると拡張子が「.rpm」となっています。これはzipファイルのようなものではありません。      
+      <a href="https://qiita.com/sksmnagisa/items/05a6f8a707010b8bea56">【パッケージ】Linuxの「パッケージ」と「yum」と「rpm」について勉強したのでまとめてみた。</a>
+      を見てまずはrpm拡張子について理解しましょう。
+
+      黒本ではLinuxで解説されますが、WindowsのPCにLinux（ubuntu）を入れて環境構築しようとしたところ大変過ぎました🙅
+      Windows PCの人はWindowsに入れることをお勧めします。
+      </br>
+    </p>
+    <h2 class="sectionTitleLine">セクションの名前</h2>
+    <p>
+      内容</br>
+      </br>
+    </p>
+    <h2 class="sectionTitleLine">セクションの名前</h2>
+    <p>
+      内容</br>
+      </br>
+    </p>
+  </main>
+  <footer class="footer">
+    <h4 id="footerTitle">記事一覧</h4>
+    <a href="../index.html" class="btnArticleLink">筆者について</a> 
+    <!-- <a href="./javaSilver.html" class="btnArticleLink">java Silver合格体験記</a> -->
+    <a href="./jobHuntting.html" class="btnArticleLink">一浪日大でもホワイト企業に就職する方法</a>
+    <a href="./security.html" class="btnArticleLink">ASVS認証用語集</a>
+  </footer>
+  </body>
+</html>

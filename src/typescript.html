@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LG6VXEVGW8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-LG6VXEVGW8');
+  </script>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <header id="articleHader">
+    <h1 id="articleTitle">はじめてのTypescript</h1>
+    <a href="../index.html" class="btn-flat-border">home</a>
+  </header>
+  <main class="box">
+    🕓本記事の最終更新日は
+    <time id="modify"></time>
+    です。
+    <script>
+      /* 更新日の取得 */
+      const last = new Date(document.lastModified);
+      const year = last.getFullYear();
+      const month = last.getMonth() + 1;
+      const date = last.getDate();
+      /* 日付を書き換える */
+      const target = document.getElementById('modify');
+      target.textContent = year + '-' + month + '-' + date;
+    </script>
+    <h2 class="sectionTitleLine">私のスペック</h2>
+    <p>      
+    
+    </p>
+    <h2 class="sectionTitleLine">参考にした教材</h2>
+    <p>      
+        <a href="https://youtu.be/nRCNL9T3J98?si=oAOmCcLt5ziOmA-2" >
+【React入門】完全初心者OK！１から簡単なTodoアプリを作ってReactの１歩を踏み出してみよう ~Reactチュートリアル~
+</a> 
+    </p>  
+    <h2 class="sectionTitleLine"></h2>
+    <p>
+        <a href="https://miya-system-works.com/blog/detail/179#:~:text=Node.js" >環境構築サイト</a>
+        <a href="https://nodejs.org/en" >公式サイト</a>
+        
+    </p>
+    
+
+  </main>
+  <footer class="footer">
+    <h4 id="footerTitle">記事一覧</h4>
+    <a href="../index.html" class="btnArticleLink">筆者について</a> 
+    <!-- <a href="./javaSilver.html" class="btnArticleLink">java Silver合格体験記</a> -->
+    <a href="./jobHuntting.html" class="btnArticleLink">一浪日大でもホワイト企業に就職する方法</a>
+  </footer>
+  </body>
+</html>

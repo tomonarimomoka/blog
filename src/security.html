@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LG6VXEVGW8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-LG6VXEVGW8');
+  </script>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  
+
+  <header id="articleHader">
+    <h1 id="articleTitle">ASVS用語集</h1>
+    <a href="../index.html" class="btn-flat-border">home</a>
+  </header>
+  <main class="box">
+    🕓本記事の最終更新日は
+    <time id="modify"></time>
+    です。
+    <script>
+      /* 更新日の取得 */
+      const last = new Date(document.lastModified);
+      const year = last.getFullYear();
+      const month = last.getMonth() + 1;
+      const date = last.getDate();
+      /* 日付を書き換える */
+      const target = document.getElementById('modify');
+      target.textContent = year + '-' + month + '-' + date;
+    </script>
+    <h2 class="sectionTitleLine">本記事について</h2>
+    <p>
+      本記事ではセキュリティ標準として知られているASVSの中の認証に関する用語を解説します。<br>
+      参照した記事は
+      <a href="https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html">Authentication Cheat Sheet</a>
+      です。<br>
+      セキュリティに関する知識があまりない方がサクッと調べられるように箇条書きで説明します。<br>
+      参考リンクも記載していますので、もっと詳しく入れたい方は参照してください。
+    </p>
+    <h2 class="sectionTitleLine">ASVS</h2>
+    <ul>
+      <li>Application Security Verification Standardの略</li>
+      <li>開発者と攻撃を防ぐための方法を示したガイドライン</li>
+      <li>OWASPという団体が定めている</li>
+    </ul>
+    <h4>参考リンク</h4>
+    OWASP , 2023 , <a href="https://cheatsheetseries.owasp.org/index.html">OWASP Cheat Sheet Series</a>
+    <br>
+    OWASP , 2023 , <a href="https://owasp.org/www-project-cheat-sheets/">OWASP公式ホームページ</a>
+    <br>
+    2022 , <a href="https://qiita.com/Nebel-hb/items/cef4c43abcb9e06d2d4a">脱初心者！ ASVSとは</a>
+    
+    <h2 class="sectionTitleLine">MFA/多要素認証</h2>
+    <p>
+        <ul>
+          <li>Multi-factor authenticationの略</li>
+          <li>MFA = 多要素認証</li>
+          <li>多要素認証にシングルサインオンを使うと便利</li>
+        </ul>
+
+        <h4>参考リンク</h4>
+        MITANI CORPORATION , 2021 , 
+        <a href="https://www.mitani-edu.jp/column/049/">シングルサインオン（SSO）の概要とメリットとは</a>
+        <br>
+        Okta社 ,2021 , 
+        <a href="https://www.okta.com/jp/blog/2021/02/single-sign-on-sso/">SSO（シングルサインオン）のログインとその誤解</a>
+        <br>
+        アイディネットワークス株式会社 , 2014 , 
+        <a href="https://www.idnetworks.co.jp/wP/2014/04/04/sso-with-2fa/">企業ユースであればシングルサインオンは二要素認証（多要素認証）と併用するべき</a>
+        <br>
+        オージス総研 , 
+        <a href="https://www.ogis-ri.co.jp/column/themistruct/c106480.html">シングルサインオン（SSO）認証とは？</a>
+
+    </p>
+    <h2 class="sectionTitleLine">CAPTCHA</h2>
+    <p>
+      <ul>
+        <li>Completely Automated Public Turing test to tell Computers and Humans Apart の略</li>
+        <li>CAPTCHA = キャプチャ認証</li>
+        <li>ユーザーが機械か人か判断するための仕組み</li>
+        <li>ブルートフォース攻撃のようなソフトウェアを使った攻撃から守るためのもの</li>
+        <li>ゆがんだ文字とか信号機を選ぶみたいなあれのこと</li>
+        <li>パスワードを使った認証とCHAPCHAの2つを使う認証は多要素認証にならない<br>
+        　→　なぜならば、CHAPCHA認証は人であることを証明するだけでユーザーが本人であることを確認するためのものではないから</li>
+      </ul>
+        <h4>参考リンク</h4>
+        (株)インセプト , 2019 , <a href="https://e-words.jp/w/CAPTCHA.html">CAPTCHAとは </a>
+        
+    </p>
+
+    <h2 class="sectionTitleLine">openId</h2>
+    <p>
+        <ul>
+          <li>クライアントからサーバーにデータを取りに行くとき、クライアントが正しいか認証するための仕組み</li>
+          <li>正しいクライアントであることを示す証明書を「IDトークン」と呼ぶ</li>
+          <li>IDトークンの発行元を「Open IDプロバイダー」と呼ぶ</li>
+          <li>トークンIDの発行時、クライアントとOpen IDプロバイダーの間のやり取りを標準化した仕様を「OpenID Connect」と呼ぶ</li>
+          <li>OpenID Connect は OAuth 2.0 の拡張仕様</li>
+        </ul>
+       <h4>参考リンク</h4>
+        川崎貴彦さんの記事はどれもとても分かりやすいので、おすすめです。<br>
+        川崎 貴彦 , 2020 , <a href="https://qiita.com/TakahikoKawasaki/items/498ca08bbfcc341691fe">一番分かりやすい OpenID Connect の説明</a>
+        <br>
+        (株)インセプト , 2019 , <a href="https://e-words.jp/w/OpenID.html">OpenIDとは</a>
+    </p>
+    <h2 class="sectionTitleLine">SAML</h2>
+    <p>
+        <ul>
+          <li>Security Assertion Markup Languageの略 ※Assertion(アサーション) : 断言、断定、主張</li>
+          <li>SAMLの読み方は「サムル」</li>
+          <li>XMLベースのマークアップ言語の一つ</li>
+          <li>ユーザの認証情報をを伝達するためのもの</li>
+          <li>SSO(シングルサインオン)のための仕組み</li>
+          <li>標準化団体のOASISによって策定された</li>
+        </ul>
+
+        <h4>参考リンク</h4>
+        佐々木　真 , 2022 , <a href="https://wa3.i-3-i.info/word13374.html">SAML（読：サムル）とは</a>
+        <br>
+        2018 , <a href="https://qiita.com/pasta_kun/items/4a57bd3b71ac8bf5d736">やさしい言葉で理解するSAML認証のまとめ</a>
+        <br>     
+        2023 , <a href="https://milestone-of-se.nesuke.com/product/oss/saml/">分かりやすいSAML認証の仕組みとシーケンス,メリット</a>
+        <br>
+        (株)インセプト , 2019 , <a href="https://e-words.jp/w/SAML.html">SAMLとは</a>
+        <!--
+            -----SAML認証------
+        https://boxil.jp/mag/a2950
+
+        ユーザー                        SPクラウドサービス        IdP
+        アクセス                   ⇒   SAML認証要求を作成    
+                                        IdPにリダイレクト     ⇒ SAML認証要求を解析
+                                                                ユーザー認証
+        認証応答と共にSPへリダイレクト                        ⇐ 応答を作成
+                                ⇒  ログインを許可 
+
+        Idp（Identity Provider）：認証情報を提供する側のこと。
+        SP（Service Provider）  ：WEBサービスの提供側、認証情報を利用する側のこと。
+        -->
+        
+    </p>
+    <h2 class="sectionTitleLine">TLS</h2>
+    <ul>
+      <li>Transport Layer Securityの略</li>
+      <li>TCP/IPネットワークでデータを暗号化して安全に送受信するためのプロトコル※プロトコル＝ルールのこと</li>
+      <li>TLSが使われてるとURLは「https://~~」のようになる</li>
+      <li>SSLの後継規格</li>
+      <li>広い意味で　HTTPS = SSL = TLS</li>
+      <li>HTTPS = HTTP で行われるウェブ通信に、「SSL/TLS」を加えたもの</li>
+    </ul>
+    <h4>参考リンク</h4>
+    佐々木　真 , 2022 , <a href="https://wa3.i-3-i.info/word16299.html">TLSとは</a>
+    <br>
+    digicert社 , <a href="https://www.digicert.com/jp/faq/public-trust-and-certificates/what-is-ssl">SSL とは何ですか？</a>
+    <br>
+    HIKE.Inc , 2018 , <a href="https://blog.qbist.co.jp/?p=1441">HTTPS と SSL と TLS：その違いを５分でわかりやすく解説！</a>
+    <br>
+    (株)インセプト , 2020 , <a herf="https://e-words.jp/w/TLS.html">TLSとは</a>
+
+    <h2 class="sectionTitleLine">TCP/IP</h2>
+    <h3>■TCP/IPモデルとは</h3>
+    <ul style="margin: 0.2em;">
+      <li>HTTPのベースになっている</li>
+      <li>世界標準のプロトコル（※プロトコル＝ルール）のモデル</li>
+      <li>以下のような階層構造になっている</li>
+    </ul>
+    <table border="1">
+      <caption>TCP/IPの階層構造</caption>
+      <tr><th>名前</th><th>何をする</th><th>プロトコル例</th></tr>
+      <tr><td>アプリケーション層</td><td></td><td>HTTP</td></tr>
+      <tr><td>トランスポート層</td><td>データの転送を保証</td><td>TCP</td></tr>
+      <tr><td>インターネット層</td><td>ネットワークでデータをやり取りする</td><td>IP</td></tr>
+      <tr><td>ネットワークインターフェース層</td><td></td><td>Ethernet</td></tr>
+    </table>
+    
+    <h3>■IP</h3>
+    <ul style="margin: 0.2em;">
+      <li>Internet Protocolの略</li>
+      <li>インターネット層のプロトコル</li>
+      <li>データを送り出すことを保証する</li>
+      <li>実際にデータが届くかは保証しない</li>
+    </ul>
+    <h3 >■TCP</h3>
+    <ul style="margin: 0.2em;">
+      <li>Transmission Control Protcolの略</li>
+      <li>トランスポート層のプロトコル</li>
+      <li>接続先にコネクションを張る</li>
+      <li>データの到達を保証</li>
+    </ul>
+    <p>
+      <h4>参考リンク</h4>
+      山本陽平. "第6章　HTTPの基本". Webを支える技術.技術評論社, 2010, 68-70
+      <br>
+      佐々木　真 , 2022 , <a href="https://wa3.i-3-i.info/word11091.html">ネットワークインターフェイス層とは</a>
+      <br>
+      佐々木　真 , 2022 , <a href="https://wa3.i-3-i.info/word11090.html">TCP/IPモデルとは</a>
+    </p>
+
+    <h2 class="sectionTitleLine">SHA-256</h2>
+    <p>
+      <ul>
+        <li>入力されたデータをもとにして作った適当な値を返してくれる関数（ハッシュ関数）のひとつ</li>
+      </ul>
+      <h4>参考リンク</h4>
+      佐々木　真 , 2022 , <a href="https://wa3.i-3-i.info/word15997.html">SHA-256とは</a>
+    </p>
+
+    <h2 class="sectionTitleLine">CSRFとXSS</h2>
+    <p>
+      CSRFとXSSどちらも悪意のあるURLを踏ませることで始まる攻撃
+    </p>
+    <h3 >■CSRF</h3>
+    <ul style="margin: 0.2em;">
+      <li>Cross-Site Request Forgerの略</li>
+      <li>URLふむと意図しない動作をさせる</li>
+    </ul>
+
+    <h3>■XSS</h3>
+    <ul style="margin: 0.2em;">
+      <li>Cross Site Scriptingの略</li>
+      <li>COOKIEを盗む</li>
+    </ul>
+    <h4>参考リンク</h4>
+    2019 , <a href="https://qiita.com/wanko5296/items/142b5b82485b0196a2da">3分でわかるXSSとCSRFの違い</a>
+    <br>
+    2020 , <a href="https://qiita.com/att55/items/a50ca43adde206017525">XSSとCSRFって結局何が違うのか？</a>
+    <br>
+    
+    
+  </main>
+  <footer class="footer">
+    <h4 id="footerTitle">記事一覧</h4>
+    <a href="../index.html" class="btnArticleLink">このブログについて</a> 
+    <a href="./javaSilver.html" class="btnArticleLink">java Silver合格体験記</a>
+    <a href="./jobHuntting.html" class="btnArticleLink">一浪日大でもホワイト企業に就職する方法</a>
+  </footer>
+  </body>
+</html>

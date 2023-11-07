@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LG6VXEVGW8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-LG6VXEVGW8');
+  </script>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <header id="homeHeader">
+    <img src="./src/headerImg.jpg" id="homeHeaderImg">
+    <!-- <h1 id="homeTitle" class="neon">♡ももかの成長日記♡</h1> -->
+  </header>
+  <main class="box">
+    🕓本記事の最終更新日は
+    <time id="modify"></time>
+    です。
+    <script>
+      /* 更新日の取得 */
+      const last = new Date(document.lastModified);
+      const year = last.getFullYear();
+      const month = last.getMonth() + 1;
+      const date = last.getDate();
+      /* 日付を書き換える */
+      const target = document.getElementById('modify');
+      target.textContent = year + '-' + month + '-' + date;
+    </script>
+    <h2 class="homeSubTitleFont">♥このブログについて</h2>
+    <p>インターネット上に私だけの世界を作ってみたいなと思って始めてみます。
+        技術の話や資格の合格体験記とか載せてこう思っています。
+        とテックブログにしては珍しく、ピンクできらきらでかわいい世界を作ります♡
+        世の中に一つくらいかわいいテックブログがあってもいいかな♪<br>
+        <br>
+        なりたい自分になるために、頑張る私の日記です。応援してね💕</p>
+    
+    <h2 class="homeSubTitleFont">♥自己紹介</h2>
+    <p>
+        彼氏が欲しい普通の女の子です。
+    </p>
+    <h2 class="homeSubTitleFont">♥経歴</h2>
+    <p>
+      <table border="1">
+        <tr><td>どこで</td><td>どうした</td><td>学んだこと</td></tr>
+        <tr><td>普通の公立高校</td><td>卒業</td><td></td></tr>
+        <tr><td>四谷学院</td><td>浪人</td><td>数学とか</td></tr></tr>
+        <tr><td>日本大学</td><td>入学</td><td>物理</td></tr></tr>
+        <tr><td></td><td>長期インターン</td><td>java , C#</td></tr>
+        <tr><td></td><td>プログラマーのバイト</td><td>C#</td></tr>
+        <tr><td></td><td>研究</td><td>python , shellScript</td></tr>
+        <tr><td></td><td>卒業</td><td></td></tr></tr>
+        <tr><td>普通の会社</td><td>入社</td><td>java</td>
+      </table>
+    </p>
+    <h2 class="homeSubTitleFont">♥資格</h2>
+    <p>
+      ・ITパスポート試験<br>
+      ・OCJP(通称：java Silver)<br>
+    </p>
+    <img src="./src/SILVSE11JPN.jpg" class="lisenceImage" alt="認定バッチ">
+  </main> 
+  <footer class="footer">
+    <h4 id="footerTitle">記事一覧</h4> 
+    <a href="/src/javaSilver.html" class="btnArticleLink">java Silver合格体験記</a>
+    <a href="/src/jobHuntting.html" class="btnArticleLink">一浪日大でもホワイト企業に就職する方法</a>
+    <a href="/src/security.html" class="btnArticleLink">ASVS認証用語集</a>
+  </footer>
+    
+</body>
+</html>
