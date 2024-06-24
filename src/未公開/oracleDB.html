@@ -16,7 +16,7 @@
 </head>
 <body>
   <header id="articleHader">
-    <h1 id="articleTitle">タイトル</h1>
+    <h1 id="articleTitle">oracle database 環境構築</h1>
     <a href="../index.html" class="btn-flat-border">home</a>
   </header>
   <main class="box">
@@ -33,20 +33,39 @@
       const target = document.getElementById('modify');
       target.textContent = year + '-' + month + '-' + date;
     </script>
-    <h2 class="sectionTitleLine">セクションの名前</h2>
+    <h2 class="sectionTitleLine">インストーラーをダウンロード</h2>
     <p>
       内容</br>
       </br>
     </p>
-    <h2 class="sectionTitleLine">セクションの名前</h2>
+    <h2 class="sectionTitleLine">dbcaコマンドが使えない</h2>
     <p>
-      内容</br>
-      </br>
+        ■エラーメッセージ<br>
+        dbcaコマンドが使えない</br>
+        ■解決策<br>
+        WindowsであればタスクバーのWindowsマークからアプリを起動する。</br>
+        ■ちなみに<br>
+        Windowsでもdbcaコマンドは使えるはずです。私は初めは使えなくて、GUIで起動していたけど気づいたらCUIでもできるようになっていた。。。</br>
+       
+    </br>
+    </p>
+    <h2 class="sectionTitleLine">物理メモリー不足</h2>
+    <p>
+        ■エラーメッセージ<br>
+        [DBT-11209]現在使用可能な物理メ モリー は、データベースの作成に必要な物理メ モリー （3236MB）を下回っています。</br>
+        ■解決策<br>
+        ブラウザを開きすぎていたので消した。<br>
+        物理メモリの使用率はWindowsならタスクマネージャー、Linuxならシステムモニターで確認できます。<br>
+        ■ちなみに<br>
+        私はローカルディスクの使用率が高いことが原因かと思い、一生懸命不要なファイルを消していたorz
+    </br>
     </p>
     <h2 class="sectionTitleLine">セクションの名前</h2>
     <p>
-      内容</br>
-      </br>
+        ■エラーメッセージ</br>
+        インスタンスがローカルノードで実行されていません</br>
+        ■解決策</br>
+        ■ちなみに<br>
     </p>
     <h2 class="sectionTitleLine">セクションの名前</h2>
     <p>

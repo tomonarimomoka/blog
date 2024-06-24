@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="ja">
 <head>
+  <link rel="icon" href="../素材/favicon.ico">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-LG6VXEVGW8"></script>
   <script>
@@ -11,7 +12,7 @@
     gtag('config', 'G-LG6VXEVGW8');
   </script>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../style.css?version=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
@@ -40,18 +41,23 @@
       target.textContent = year + '-' + month + '-' + date;
     </script>
     <h2 class="sectionTitleLine">私のスペック</h2>
-    <p>
-    ・ぴよぴよ新卒🐤</br>
-    ・学生自体プログラマーのバイトでC#使ってた</br>
-    ・一浪日大（物覚えは少し悪め...）
-    </p>
+    <ul>
+      <li>ぴよぴよ新卒🐤</li>
+      <li>大学時代からプログラミングは好きでやっていた</li>
+      <li>一浪日大（物覚えは少し悪め...）</li>
+    </ul>
     <h2 class="sectionTitleLine">使った教材</h2>
-    <p>以下の2つだけです。<br>
-    ・<a href="https://amzn.asia/d/8J109FA">黒本</a></br>
-    ・<a href="https://www.youtube.com/channel/UC42DlV-0RDb6fJ8A3IbAang">志賀先生のyoutube</a></br>
-    <br>
-    志賀先生のYouTubeは直接点数に繋がるというよりは根本的な理解につながります。<br>
-    私のように学生時代に情報学を専攻していなかった人は必見です。</p>
+    <p>以下の2つだけです。</p>
+    <ul>
+      <li>王道の<a href="https://amzn.asia/d/8J109FA">黒本</a></li>
+      <li><a href="https://www.youtube.com/channel/UC42DlV-0RDb6fJ8A3IbAang">志賀先生のyoutube</a></li>
+    </ul>
+    <p>
+      志賀先生は黒本の著者の方です。
+      YouTubeでは、直接点数に繋がるというよりは根本的な理解につながる解説動画を上げてくださっています。
+      私のように学生時代に情報学を専攻していなかった人は必見です。<br><br>
+      それに、、志賀先生はとってもかっこいいんです💕
+    </p>
 
     <h2 class="sectionTitleLine">勉強量</h2>
     <p>
@@ -72,8 +78,9 @@
       間違えた問題の復習や解き直しは全部で5回以上は行いました🔥🔥🔥<br>
       <br>
       以下に得点の推移を載せるのでご参考までにどうぞ(*'▽')<br>
-      <table border="1">
-        <tr><td>章</td><td>得点率:1回目</td><td>得点率:2回目</td><td>得点率:3回目</td><td>得点率:4回目</td><td>得点率:5回目</td></tr>
+      <table>
+        <tr><th></th><th colspan="5">得点率</th></tr>
+        <tr><th>章</th><th>1回目</th><th>2回目</th><th>3回目</th><th>4回目</th><th>5回目</th></tr>
         <tr><td>1</td><td>50</td><td>87</td><td>75</td><td></td><td></td></tr>
         <tr><td>2</td><td>22</td><td>77</td><td>77</td><td></td><td></td></tr>
         <tr><td>3</td><td>42</td><td>71</td><td>71</td><td></td><td></td></tr>
@@ -121,15 +128,20 @@
       受験結果は正答率76％でした✨<br>
     </p>
     
-    <img src="./SILVSE11JPN.jpg" class="lisenceImage" alt="認定バッチ">
+    <img src="../素材/SILVSE11JPN.jpg" class="lisenceImage" alt="認定バッチ">
     
   </main>
   <footer class="footer">
     <h4 id="footerTitle">記事一覧</h4>
     <a href="../index.html" class="btnArticleLink">このブログについて</a> 
-    <!-- <a href="./javaSilver.html" class="btnArticleLink">java Silver合格体験記</a> -->
+    <a href="./javaSilver.html" class="btnArticleLink">java Silver合格体験記</a>
     <a href="./jobHuntting.html" class="btnArticleLink">一浪日大でもホワイト企業に就職する方法</a>
     <a href="./security.html" class="btnArticleLink">ASVS認証用語集</a>
+    <a href="./oracleBronzaDBA.html" class="btnArticleLink">Oracle Master Bronze合格体験記</a>  
+    <a href="./elementOfComputer.html" class="btnArticleLink">コンピュータの3大構成要素とは？</a>  
+    <a href="./whatIsProtocol.html" class="btnArticleLink">プロトコルとは？</a>
+    <a href="./HTTPmethod.html" class="btnArticleLink">HTTPメソッドとは？</a>
+    <a href="./simpleTest.html" class="btnArticleLink">はじめての単体テスト仕様書</a>
   </footer>
   </body>
 </html>
