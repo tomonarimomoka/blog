@@ -20,24 +20,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <header id="articleHader">
-    <h1 id="articleTitle">はじめての単体テスト仕様書</h1>
-    <a href="../index.html" class="btn-flat-border">home</a>
+  <!-- ヘッダー高さ分の余白   -->
+  <div class="header-box"></div>
+  <header>
+    <!-- PC用表示 -->
+    <nav class="pc-menu">
+      <ul class="header-ul">
+        <li class="header-li"><a href="../index.html" class="header-a">Home</a></li>
+        <li class="header-li"><a href="../list-tech.html" class="header-a">技術</a></li>
+        <li class="header-li"><a href="../list-carrer.html" class="header-a">資格とキャリア</a></li>
+      </ul>
+    </nav>
   </header>
+  
   <main class="box">
-    🕓本記事の最終更新日は
-    <time id="modify"></time>
-    です。
-    <script>
-      /* 更新日の取得 */
-      const last = new Date(document.lastModified);
-      const year = last.getFullYear();
-      const month = last.getMonth() + 1;
-      const date = last.getDate();
-      /* 日付を書き換える */
-      const target = document.getElementById('modify');
-      target.textContent = year + '-' + month + '-' + date;
-    </script>
+    
+    <h1 id="articleTitle">はじめての単体テスト仕様書</h1>
+    <div class="right">
+      🕓本記事の最終更新日は
+      <time id="modify"></time>
+      です。
+      <script>
+        /* 更新日の取得 */
+        const last = new Date(document.lastModified);
+        const year = last.getFullYear();
+        const month = last.getMonth() + 1;
+        const date = last.getDate();
+        /* 日付を書き換える */
+        const target = document.getElementById('modify');
+        target.textContent = year + '-' + month + '-' + date;
+      </script>
+    </div>
+    
     
     <h2 class="sectionTitleLine">筆者のスペック</h2>
     <ul>
@@ -267,20 +281,5 @@
     <p>最後まで読んでくださり、ありがとうございました。</p>
     <p>テストが好きなエンジニアは少ないと思いますが、品質を保証するためにとても大切なので、頑張ってテストしましょー！</p>
   </main>
-  
-  <footer class="footer">
-    <h4 id="footerTitle">記事一覧</h4>
-    <a href="../index.html" class="btnArticleLink">このブログについて</a> 
-    <a href="./javaSilver.html" class="btnArticleLink">java Silver合格体験記</a>
-    <a href="./jobHuntting.html" class="btnArticleLink">一浪日大でもホワイト企業に就職する方法</a>
-    <a href="./security.html" class="btnArticleLink">ASVS認証用語集</a>
-    <a href="./oracleBronzaDBA.html" class="btnArticleLink">Oracle Master Bronze合格体験記</a>  
-    <a href="./elementOfComputer.html" class="btnArticleLink">コンピュータの3大構成要素とは？</a>  
-    <a href="./whatIsProtocol.html" class="btnArticleLink">プロトコルとは？</a>
-    <a href="./HTTPmethod.html" class="btnArticleLink">HTTPメソッドとは？</a>
-    <a href="./simpleTest.html" class="btnArticleLink">はじめての単体テスト仕様書</a>
-    <a href="./firstHakkason.html" class="btnArticleLink">はじめてのハッカソン</a>
-    <a href="./firstLTparty.html" class="btnArticleLink">はじめてのLT会</a>
-  </footer>
   </body>
 </html>

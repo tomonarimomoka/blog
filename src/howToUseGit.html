@@ -18,36 +18,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <header id="articleHader">
-    <h1 id="articleTitle">はじめてのGit</h1>
-    <a href="../index.html" class="btn-flat-border">home</a>
+  <!-- ヘッダー高さ分の余白   -->
+  <div class="header-box"></div>
+  <header>
+    <!-- PC用表示 -->
+    <nav class="pc-menu">
+      <ul class="header-ul">
+        <li class="header-li"><a href="../index.html" class="header-a">Home</a></li>
+        <li class="header-li"><a href="../list-tech.html" class="header-a">技術</a></li>
+        <li class="header-li"><a href="../list-carrer.html" class="header-a">資格とキャリア</a></li>
+      </ul>
+    </nav>
   </header>
+  
   <main class="box">
-    🕓本記事の最終更新日は
-    <time id="modify"></time>
-    です。
-    <script>
-      /* 更新日の取得 */
-      const last = new Date(document.lastModified);
-      const year = last.getFullYear();
-      const month = last.getMonth() + 1;
-      const date = last.getDate();
-      /* 日付を書き換える */
-      const target = document.getElementById('modify');
-      target.textContent = year + '-' + month + '-' + date;
-    </script>
+    
+    <h1 id="articleTitle">はじめてのGit</h1>
+    <div class="right">
+      🕓本記事の最終更新日は
+      <time id="modify"></time>
+      です。
+      <script>
+        /* 更新日の取得 */
+        const last = new Date(document.lastModified);
+        const year = last.getFullYear();
+        const month = last.getMonth() + 1;
+        const date = last.getDate();
+        /* 日付を書き換える */
+        const target = document.getElementById('modify');
+        target.textContent = year + '-' + month + '-' + date;
+      </script>
+    </div>
+    
     <h2 class="sectionTitleLine">本記事の対象者</h2>
     <ul>      
       <li>はじめてのGitを使う人</li>
       <li>個人開発でとりあえずGitを使いたい人</li>
       <li>いつも仕事で別のバージョン管理を使っている人</li>
     </ul>
+    <p>※本記事ではGitの環境構築については触れません。ググると沢山記事が出てくるはずなので、環境構築が終わったらこの記事に戻ってきて下さい。</p>
     <h2 class="sectionTitleLine">Gitとは</h2>
     <p>
       Gitとは、バージョン管理ツールのことです。
     </p>
     <p>
-      バージョン管理とは、ファイルの更新を記録しておき、2019年3月の時のファイルの内容などを復元できるようにすることです。また、バージョン管理ツールではコミットした人も記録するのが一般的です。
+      バージョン管理とは、ファイルの更新を記録しておき、過去のファイルの内容などを復元できるようにすることです。また、バージョン管理ツールではコミットした人も記録するのが一般的です。
     </p>
     <p>
       バージョン管理ツールは、GitかSubversionというツールが有名です。 最近では、Gitの方が人気で、Subversion（SVN）を使っていると古いなんで言われることもしばしば。。。
@@ -82,7 +97,7 @@
       <p>■コメント付きでコミットするとき</p>
       <pre><code class="codeBlock">git commit -m '任意のコミットメッセージ'</code></pre>
 
-      <p>■gi commitした後</p>
+      <p>■gi commitをオプションなしで実行した後</p>
       <p>コメントオプションを付けずにcommitコマンドを実行すると、VIMに入ります。</p>
       <ol>
         <li>Eacキーを押す</li>
@@ -91,8 +106,8 @@
       </ol>
       
       <h4>参考</h4>
-      2014 , <a href="https://qiita.com/FiNGAHOLiC/items/d68d19ff9fecc59084e2">git addの--allオプション</a>
-      2014 , <a href="https://kaleido01.com/git-commit-solution/">git addの--allオプション</a>
+      2014 , <a href="https://qiita.com/FiNGAHOLiC/items/d68d19ff9fecc59084e2">git addの--allオプション</a><br>
+      2019 , <a href="https://kaleido01.com/git-commit-solution/">git commitしようとしたら終了できずに戸惑ったので抜け出す方法を書き留めておく</a>
     
     <h2 class="sectionTitleLine">おわりに</h2>
       <p>
@@ -105,11 +120,5 @@
         Gitを使いこなして、楽しい開発ライフを送りましょー！
       </p>
   </main>
-  <footer class="footer">
-    <h4 id="footerTitle">記事一覧</h4>
-    <a href="../index.html" class="btnArticleLink">筆者について</a> 
-    <!-- <a href="./javaSilver.html" class="btnArticleLink">java Silver合格体験記</a> -->
-    <a href="./jobHuntting.html" class="btnArticleLink">一浪日大でもホワイト企業に就職する方法</a>
-  </footer>
   </body>
 </html>

@@ -19,24 +19,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <header id="articleHader">
-    <h1 id="articleTitle">HTTPメソッドとは？</h1>
-    <a href="../index.html" class="btn-flat-border">home</a>
+  <!-- ヘッダー高さ分の余白   -->
+  <div class="header-box"></div>
+  <header>
+    <!-- PC用表示 -->
+    <nav class="pc-menu">
+      <ul class="header-ul">
+        <li class="header-li"><a href="../index.html" class="header-a">Home</a></li>
+        <li class="header-li"><a href="../list-tech.html" class="header-a">技術</a></li>
+        <li class="header-li"><a href="../list-carrer.html" class="header-a">資格とキャリア</a></li>
+      </ul>
+    </nav>
   </header>
+  
   <main class="box">
-    🕓本記事の最終更新日は
-    <time id="modify"></time>
-    です。
-    <script>
-      /* 更新日の取得 */
-      const last = new Date(document.lastModified);
-      const year = last.getFullYear();
-      const month = last.getMonth() + 1;
-      const date = last.getDate();
-      /* 日付を書き換える */
-      const target = document.getElementById('modify');
-      target.textContent = year + '-' + month + '-' + date;
-    </script>
+    
+    <h1 id="articleTitle">HTTPメソッドとは？</h1>
+    <div class="right">
+      🕓本記事の最終更新日は
+      <time id="modify"></time>
+      です。
+      <script>
+        /* 更新日の取得 */
+        const last = new Date(document.lastModified);
+        const year = last.getFullYear();
+        const month = last.getMonth() + 1;
+        const date = last.getDate();
+        /* 日付を書き換える */
+        const target = document.getElementById('modify');
+        target.textContent = year + '-' + month + '-' + date;
+      </script>
+    </div>
+    
     <h2 class="sectionTitleLine">８つのメソッド</h2>
     <p>HTTPには8つしかメソッドがありません。今回はよく使うGETとPOSTについて詳しく説明します。</p>
     <table>
@@ -101,7 +115,7 @@ content_type = "text/html; charset=UTF-8"
     <p>
       言い換えると、URLにパラメータが含まれないからエンドユーザーにばれないということですね。
     </p>
-<h2 class="sectionTitleLine"></h2>
+    <h2 class="sectionTitleLine"></h2>
     <h4>参考</h4>
       山本陽平. "第6章　HTTPの基本". Webを支える技術.技術評論社, 2010
       <br>
@@ -110,7 +124,11 @@ content_type = "text/html; charset=UTF-8"
       佐々木　真 , 2022 , <a href="https://wa3.i-3-i.info/word1496.html">POSTメソッド【HTTPリクエストメソッド】（読：ポストメソッド　英：POST method）とは</a>
       <br>
       2020 , <a href="https://qiita.com/kanataxa/items/522efb74421255f0e0a1">GETとPOSTの違いについて</a>
-    
+      <h2 class="sectionTitleLine">おわりに</h2>
+      <p>
+        最後まで読んでいただき、ありがとうございました。<br>
+        普段とりあえずPOSTを使っている人も、なぜPOSTを使うか理解できましたか？お役に立てていれば幸いです。
+      </p>
     </main>
     
   <footer class="footer">
