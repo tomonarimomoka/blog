@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <link rel="icon" href="./素材/favicon.ico">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LG6VXEVGW8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-LG6VXEVGW8');
+  </script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2761899560206236" crossorigin="anonymous"></script>
+
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css?version=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="main.js"></script>
+  
+</head>
+<body>
+  <!-- ヘッダー高さ分の余白   -->
+  <div class="header-box"></div>
+  <header>
+    <nav class="pc-menu">
+      <ul class="header-ul">
+        <li class="header-li"><a href="/index.html" class="header-a">HOME</a></li>
+        <li class="header-li"><a href="/list-tech.html" class="header-a">ARTICLE</a></li>
+        <li class="header-li"><a href="/privacyPolicy.html" class="header-a">PRIVACY</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="box">
+    <h1 id="articleTitle">プライバシーポリシー</h1>
+    <div class="right">
+      🕓本記事の最終更新日は
+      <time id="modify"></time>
+      です。
+      <script>
+        /* 更新日の取得 */
+        const last = new Date(document.lastModified);
+        const year = last.getFullYear();
+        const month = last.getMonth() + 1;
+        const date = last.getDate();
+        /* 日付を書き換える */
+        const target = document.getElementById('modify');
+        target.textContent = year + '-' + month + '-' + date;
+      </script>
+    </div>    
+    <!-- <h2>当サイトに掲載されている広告について</h2>
+    当サイトでは、第三者配信の広告サービス（Googleアドセンス、A8.net、Amazonアソシエイト、バリューコマース、iTunes アフィリエイトプログラム）を利用しています。 
+    このような広告配信事業者は、ユーザーの興味に応じた商品やサービスの広告を表示するため、当サイトや他サイトへのアクセスに関する情報 『Cookie』(氏名、住所、メール アドレス、電話番号は含まれません) を使用することがあります。 
+    またGoogleアドセンスに関して、このプロセスの詳細やこのような情報が広告配信事業者に使用されないようにする方法については、<a href=”https://policies.google.com/technologies/ads?gl=jp” target=”_blank” rel=”noopener”>こちら</a>をクリックしてください。 -->
+
+    <h2>当サイトが使用しているアクセス解析ツールについて</h2>
+    <p>
+      当サイトでは、Googleによるアクセス解析ツール「Googleアナリティクス」を利用しています。
+    </p>
+    <p>
+      このGoogleアナリティクスはトラフィックデータの収集のためにCookieを使用しています。 
+    </p>
+    <p>
+      このトラフィックデータは匿名で収集されており、個人を特定するものではありません。 
+    </p>
+    <p>
+      この機能はCookieを無効にすることで収集を拒否することが出来ますので、お使いのブラウザの設定をご確認ください。
+    </p>
+    <p>
+      詳しくは、<a href="https://marketingplatform.google.com/about/analytics/terms/jp/">Google アナリティクス利用規約</a>をご確認ください。
+    </p>
+    
+
+    <!-- &nbsp;
+    <h2>当サイトへのコメントについて</h2>
+    当サイトでは、スパム・荒らしへの対応として、コメントの際に使用されたIPアドレスを記録しています。 
+    これはブログの標準機能としてサポートされている機能で、スパム・荒らしへの対応以外にこのIPアドレスを使用することはありません。 
+    また、メールアドレスとURLの入力に関しては、任意となっております。
+    全てのコメントは管理人である、★★★名前を入れる（ハンドルネーム可）★★★が事前にその内容を確認し、承認した上での掲載となりますことをあらかじめご了承下さい。
+    加えて、次の各号に掲げる内容を含むコメントは管理人の裁量によって承認せず、削除する事があります。
+    特定の自然人または法人を誹謗し、中傷するもの。 極度にわいせつな内容を含むもの。
+    禁制品の取引に関するものや、他者を害する行為の依頼など、法律によって禁止されている物品、行為の依頼や斡旋などに関するもの。
+    その他、公序良俗に反し、または管理人によって承認すべきでないと認められるもの。 -->
+  </main> 
+  
+</body>
+</html>
