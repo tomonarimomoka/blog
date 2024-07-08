@@ -16,6 +16,8 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="../style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
 </head>
 <body>
   <!-- ヘッダー高さ分の余白   -->
@@ -93,6 +95,7 @@
 
     <h2 class="sectionTitleLine">動的にプロンプトを作る</h2>
     <P>私は以下のようにして動的にプロンプトを作りました。</p>
+
       <pre><code class="codeBlock">
 def addCondition(prompt,conditonType,condition):
   if(len(condition) != 0):
@@ -173,5 +176,6 @@ def makepromptForLP(referenceUrl,businessType,target,personasGender,age,imageCol
       最後まで読んでくださり、ありがとうございました。
     </p>
   </main>
+  <script>hljs.highlightAll();</script>
   </body>
 </html>
