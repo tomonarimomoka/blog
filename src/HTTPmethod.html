@@ -70,9 +70,11 @@
     <P>
       GETではリソースの取得ができます。リソースの取得の際は以下のようにパラメータを含めることでどんなデータが欲しいのか、サーバー側に伝えることができます。
     </P>
-    <code class="codeBlock">
- http://examole.jp/search?q={リクエストパラメータ}
-    </code>
+    <pre>
+      <code class="codeBlock">
+http://examole.jp/search?q={リクエストパラメータ}
+      </code>
+    </pre>
     <h3>GETは危険？</h3>
     <p>このパラメータがあまりに長い場合やエンドユーザーに見せたくない場合にはPOSTを使いましょう。
       URLでパラメータが見えてしまうのでブラウザのURLバーからエンドユーザーに見えてしまいます。</p>
