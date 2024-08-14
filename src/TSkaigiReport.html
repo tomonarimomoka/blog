@@ -73,155 +73,137 @@
       </table>
     </p>
 
-    <h2 class="sectionTitleLine">発表</h2>
-    <table > 
-      <tbody>
-        <tr><th>氏名</th><td>鴻巣 和司 さん</td></tr>
-        <tr><th>会社名</th><td>LINEヤフー株式会社</td></tr>
-        <tr><th>題名</th><td>大規模なコードベースの改修のために自作TypeScriptツールを作るメリット</td></tr>
-        <tr><th>発表概要</th>
-          <td>
-            <ul>
-              <li>ソースコードを一定のルールで上書きするツールを作った</li>
-              <li>プロジェクトの構成に基づく変更や型情報の利用ができるTypeScriptで作ることに</li>
-              <li>ソースコードのリファクタリングは、実装者は単調な作業で辛い</li>
-              <li>このツールを導入すると、レビュアーは「差分」ではなく、「差分を作る差分」になり楽</li>
-              <li>ポイントととして、汎用性ではなく、個別最適化を目指した。80%を目指して作った</li>
-            </ul>
-          </td>
-        </tr>
-        <tr><th>感想</th><td>私は、本当にただ置換をするだけのツールを作ったことがあるが、TypeScriptで型情報などを利用して書き換えるのは面白いと思た。</td></tr>
-      </tbody>
+    <h2 class="sectionTitleLine">発表：1人目</h2>
+    <h3>基本情報</h3>
+    <table>
+      <tr><th>氏名</th><td>鴻巣 和司 さん</td></tr>
+      <tr><th>会社名</th><td>LINEヤフー株式会社</td></tr>
+      <tr><th>題名</th><td>大規模なコードベースの改修のために自作TypeScriptツールを作るメリット</td></tr>
     </table>
-     <br>
+    <table> 
+    <h3>発表概要</h3>
+    <ul>
+      <li>ソースコードを一定のルールで上書きするツールを作った</li>
+      <li>プロジェクトの構成に基づく変更や型情報の利用ができるTypeScriptで作ることに</li>
+      <li>ソースコードのリファクタリングは、実装者は単調な作業で辛い</li>
+      <li>このツールを導入すると、レビュアーは「差分」ではなく、「差分を作る差分」になり楽</li>
+      <li>ポイントととして、汎用性ではなく、個別最適化を目指した。80%を目指して作った</li>
+    </ul>
+    <h3>感想</h3>
+    <p>私は、本当にただ置換をするだけのツールを作ったことがあるが、TypeScriptで型情報などを利用して書き換えるのは面白いと思た。</p>
+    
 
-    <table > 
-      <tbody>
-        <tr><th>氏名</th><td>Shota Hatadaさん</td></tr>
+    <h2 class="sectionTitleLine">発表：２人目</h2>
+    <h3>基本情報</h3>
+    <table>
+      <tr><th>氏名</th><td>Shota Hatadaさん</td></tr>
         <tr><th>会社名</th><td>株式会社dinii</td></tr>
         <tr><th>題名</th><td>ReactNative アプリ同士の通信のために型情報をサクッと共有した話</td></tr>
-        <tr><th>発表概要</th>
-          <td>
-            <ul>
-              <li>インフラ系のソフトウェアエンジニア</li>
-              <li>キッチンプリンターとアプリの連携はSDKで行ける</li>
-              <li>ハンディとレジアプリをアプリ同士で連携</li>
-              <li>無理やり同じインターフェースにする</li>
-              <li>TCP通信にした</li>
-              <li>ロールアッププラグインDTS</li>
-              <li>dts-bunle-generator</li>
-              <li>ネットワーク障害に備える仕組み</li>
-            </ul>
-          </td>
-        </tr>
-        <tr><th>感想</th><td>正直自分の知識が足りな過ぎて理解できなかった。。。</td></tr>
-      </tbody>
     </table>
-    <br>
-    <table > 
-      <tbody>
-        <tr><th>氏名</th><td>Fumiya Konno さん</td></tr>
-        <tr><th>会社名</th><td>株式会社ICS</td></tr>
-        <tr><th>題名</th><td>私のことは嫌いになってもTypeScriptのことは嫌いにならないでください〜フロントエンドエンジニアがTypeScriptと仲良くなる方法〜</td></tr>
-        <tr><th>発表概要</th>
-          <td>
-            <ul>
-              <li>初学者はどうしたらよいか</li>
-              <li>JavaScriptでは気が付けないことを教えてくれる</li>
-              <li>JavaScriptよりも安全</li>
-              <li>型はドキュメントになる</li>
-              <li>型エラーを解消できる⇒肩を定義できる⇒型から型を作る</li>
-              <li>型パズルよりも設計が大切</li>
-            </ul>
-          </td>
-        </tr>
-        <tr><th>感想</th><td>TypeScriptの本が少なくて困っていたが、JavaScriptの本で、自分で型を解決してみるやり方で勉強しようかな？と勉強方法のヒントを得ることができた。</td></tr>
-      </tbody>
-    </table>
-    <br>
-    <table > 
-      <tbody>
-        <tr><th>氏名</th><td>ktmouk  さん</td></tr>
-        <tr><th>会社名</th><td>note株式会社</td></tr>
-        <tr><th>題名</th><td>テスト用のオブジェクトを簡単につくれるFactoryJSというライブラリを作った</td></tr>
-        <tr><th>発表概要</th>
-          <td>
-            <ul>
-              <li>テストを描きたい！⇒テストデータを用意するのが大変</li>
-              <li>factory_bot , factory_boy のようなものを作りたい</li>
-              <li>Prismaのスキーマファイルから自動生成するのも作りたい</li>
-              <li>個人開発で作っていたが、会社でも使っている←いや、凄すぎ！！</li>
-            </ul>
-          </td>
-        </tr>
-        <tr><th>感想</th><td>個人開発で作ったものを会社でも使うなんて、、、凄すぎる！私もやってみたい！</td></tr>
-      </tbody>
-    </table>
-    <br>
-    <table > 
-      <tbody>
-        <tr><th>氏名</th><td>おささ さん</td></tr>
-        <tr><th>会社名</th><td>株式会社BLUEISH</td></tr>
-        <tr><th>題名</th><td>	[LT] 【App Router時代のスタイリング革命】Zero-Runtimeの理解とvanilla-extractという選択肢</td></tr>
-        <tr><th>発表概要</th>
-          <td>
-            <ul>
-              <li>Zero-Runtimeはビルド時にCSSを作成</li>
-              <li>Vanilla-extractはTypeScriptでのCSSで使える</li>
-              <li>Emotionとほぼ同じことが出来る</li>
-            </ul>
-          </td>
-        </tr>
-        <tr><th>感想</th><td>CSSいつもべた書きだからやってみたい</td></tr>
-      </tbody>
-    </table>
+    <h3>発表概要</h3>
+    <ul>
+      <li>インフラ系のソフトウェアエンジニア</li>
+      <li>キッチンプリンターとアプリの連携はSDKで行ける</li>
+      <li>ハンディとレジアプリをアプリ同士で連携</li>
+      <li>無理やり同じインターフェースにする</li>
+      <li>TCP通信にした</li>
+      <li>ロールアッププラグインDTS</li>
+      <li>dts-bunle-generator</li>
+      <li>ネットワーク障害に備える仕組み</li>
+    </ul>
+    <h3>感想</h3>
+    <p>正直自分の知識が足りな過ぎて理解できなかった。。。</p>
 
+    <h2 class="sectionTitleLine">発表：３人目</h2>
+    <h3>基本情報</h3>
+    <table>
+      <tr><th>氏名</th><td>Fumiya Konno さん</td></tr>
+      <tr><th>会社名</th><td>株式会社ICS</td></tr>
+      <tr><th>題名</th><td>私のことは嫌いになってもTypeScriptのことは嫌いにならないでください〜フロントエンドエンジニアがTypeScriptと仲良くなる方法〜</td></tr>
+    </table>
+    <h3>発表概要</h3> 
+    <ul>
+      <li>初学者はどうしたらよいか</li>
+      <li>JavaScriptでは気が付けないことを教えてくれる</li>
+      <li>JavaScriptよりも安全</li>
+      <li>型はドキュメントになる</li>
+      <li>型エラーを解消できる⇒肩を定義できる⇒型から型を作る</li>
+      <li>型パズルよりも設計が大切</li>
+    </ul>
+    <h3>感想</h3>
+    <p>TypeScriptの本が少なくて困っていたが、JavaScriptの本で、自分で型を解決してみるやり方で勉強しようかな？と勉強方法のヒントを得ることができた。</p>
     
-    <h2 class="sectionTitleLine">ゲストセッション</h2>
+    <h2 class="sectionTitleLine">発表：４人目</h2>
+    <h3>基本情報</h3>
+    <table>
+      <tr><th>氏名</th><td>ktmouk  さん</td></tr>
+      <tr><th>会社名</th><td>note株式会社</td></tr>
+      <tr><th>題名</th><td>テスト用のオブジェクトを簡単につくれるFactoryJSというライブラリを作った</td></tr>
+    </table>
+    <h3>発表概要</h3> 
     <ul>
-      <li>カオナビ</li>
-      <li>tsconfig.json</li>
-      <li>Next.jsが勝手に作ってくれることもある</li>
-      <li>moduleResolution:"bundler"にしよう！
-        モジュール解決の方法を決める
-        nodeにするとNode.jsを再現する
+      <li>テストを描きたい！⇒テストデータを用意するのが大変</li>
+      <li>factory_bot , factory_boy のようなものを作りたい</li>
+      <li>Prismaのスキーマファイルから自動生成するのも作りたい</li>
+      <li>個人開発で作っていたが、会社でも使っている←いや、凄すぎ！！</li>
+    </ul>
+    <h3>感想</h3>
+    <p>個人開発で作ったものを会社でも使うなんて、、、凄すぎる！私もやってみたい！</p>
+    
+    <h2 class="sectionTitleLine">発表：５人目</h2>
+    <h3>基本情報</h3>
+    <table>
+      <tr><th>氏名</th><td>おささ さん</td></tr>
+      <tr><th>会社名</th><td>株式会社BLUEISH</td></tr>
+      <tr><th>題名</th><td>	[LT] 【App Router時代のスタイリング革命】Zero-Runtimeの理解とvanilla-extractという選択肢</td></tr>
+    </table>
+    <h3>発表概要</h3> 
+    <ul>
+      <li>Zero-Runtimeはビルド時にCSSを作成</li>
+      <li>Vanilla-extractはTypeScriptでのCSSで使える</li>
+      <li>Emotionとほぼ同じことが出来る</li>
+    </ul>
+    <h3>感想</h3>
+    <P>CSSいつもべた書きだからやってみたい</P>
+    
+    <h2 class="sectionTitleLine">発表：６人目（ゲストセッション）</h2>
+    <h3>基本情報</h3>
+    <table>
+      <tr><th>氏名</th><td>うひょ さん</td></tr>
+      <tr><th>会社名</th><td>株式会社カオナビ</td></tr>
+      <tr><th>題名</th><td>tsconfig.jsonの設定を見直そう！　 フロントエンド向け　2024夏</td></tr>
+    </table>
+    <h3>発表概要</h3> 
+      <h3>tsconfig.jsonとは？</h3>
+      <ul>
+        <li>TypeScriptのコンパイラオプションなどを記載した設定ファイル</li>
+        <li>Next.jsが勝手に作ってくれることもある</li>
+      </ul>
+      <h3>おすすめのオプション</h3>
+        <p>■moduleResolution:"bundler"</p>
+        <ul>
+          <li>モジュール解決の方法を決める</li>
+          <li>nodeにするとNode.jsを再現する</li>
+          <li>builderはNode.jsを再現しつつ、拡張子を減らすことができる</li>  
+        </ul>
+        <p>■baseUrlは削除しよう！</p>
+        <ul>
+          <li>余計なモジュール解決をしてしまうので、ない方がいい</li>
+        </ul>
+        <p>■target</p>
+        <ul>
+          <li>指定しているとそこまでしかサポートされない！</li>
+          <li>ブラウザでどこまでサポートしているか調べて出来る限新しくしよう！</li>
+        </ul>
+        <p>■momdule:"preserve"か、"exserve"にするといい</p>
+        <ul>
+          <li>moduleオプション</li>
+          <li>targetからmoduleだけを取り出した設定</li>
+        </ul>
+      <h3>感想</h3>
+      <P>弊社のConfigファイルを見直してみたいと思った！</P>
 
-      </li>
-      <li>
-        builderはNode.jsを再現しつつ、拡張子を減らすことができる
-      </li>
-      <li>
-        baseUrlは削除しよう！
-        余計なモジュール解決をしてしまう
-      </li>
-      <li>
-        target
-        指定しているとそこまでしかサポートされない
-        ブラウザでどこまでサポートしているか調べて出来る限り新しくしよう！
-      </li>
-      <li>
-        moduleオプション
-        targetからmoduleだけを取り出した設定
-        momdule:"preserve"か、"exserve"にするといい
-      </li>
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul>
-  
-    <h2 class="sectionTitleLine"></h2>
-    <ul>
-      <li>KAMINASHI</li>
-      <li>layouteは共通化した方がよい</li>
-      <li>E2Eテストはもっくせずにゴールデンパスのみで実施</li>
-      <li>テスティングライブラリを使わない流れになっている会社もある</li>
-      <li>TypeScriptの関数だけテストするのもあり</li>
-      <li>ライブラリはラップして使おう！</li>
-    </ul>
   <h2 class="sectionTitleLine">おわりに</h2>
-    <p>
-      
-    </p>
     <p>
       ここまで読んでくださった皆様は、LT会に参加したくなったのではないでしょうか？日本のエンジニア業界を盛り上げていきましょう！
     </p>
