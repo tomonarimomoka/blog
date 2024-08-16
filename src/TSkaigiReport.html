@@ -82,6 +82,7 @@
     </table>
     <table> 
     <h3>発表概要</h3>
+    <p>この方は、自作ツールの紹介でした。</p>
     <ul>
       <li>ソースコードを一定のルールで上書きするツールを作った</li>
       <li>プロジェクトの構成に基づく変更や型情報の利用ができるTypeScriptで作ることに</li>
@@ -101,6 +102,7 @@
         <tr><th>題名</th><td>ReactNative アプリ同士の通信のために型情報をサクッと共有した話</td></tr>
     </table>
     <h3>発表概要</h3>
+    <p>この方は、株式会社diniiのシステム紹介でした。</p>
     <p>■システム概要</p>
     <ul>
       <li>飲食店のDXを目指す会社</li>
@@ -126,6 +128,7 @@
       <tr><th>題名</th><td>私のことは嫌いになってもTypeScriptのことは嫌いにならないでください〜フロントエンドエンジニアがTypeScriptと仲良くなる方法〜</td></tr>
     </table>
     <h3>発表概要</h3> 
+    <p>この方は、初心者のための勉強法紹介でした。</p>
     <p>■TypeScriptの良い点</p>
     <ul>
       <li>JavaScriptでは気が付けないことを教えてくれる = JavaScriptよりも安全</li>
@@ -149,6 +152,7 @@
       <tr><th>題名</th><td>テスト用のオブジェクトを簡単につくれるFactoryJSというライブラリを作った</td></tr>
     </table>
     <h3>発表概要</h3> 
+    <p>この方は、自作ツールの紹介でした。</p>
     <ul>
       <li>テストをしっかり書きたい！ ⇒ テストデータを用意するのが大変 ⇒ ライブラリを作った</li>
       <li>factory_bot（Rubyのテスト用ライブラリ） , factory_boy（Pythonのテスト用ライブラリ） のようなものを作りたい</li>
@@ -165,14 +169,26 @@
       <tr><th>会社名</th><td>株式会社BLUEISH</td></tr>
       <tr><th>題名</th><td>	[LT] 【App Router時代のスタイリング革命】Zero-Runtimeの理解とvanilla-extractという選択肢</td></tr>
     </table>
-    <h3>発表概要</h3> 
+    <h3>発表概要</h3>
+    <p>この方は、vanilla-extractの紹介でした。</p>
+    <p>■Zero-Runtime CSS-in-JS</p>
     <ul>
-      <li>Zero-Runtimeはビルド時にCSSを作成</li>
-      <li>Vanilla-extractはTypeScriptでのCSSで使える</li>
-      <li>Emotionとほぼ同じことが出来る</li>
+      <li>Runtime CSS-in-JSはJavaScript実行時にCSSを作成</li>
+      <li>Zero-Runtime CSS-in-JSはビルド時にCSSを作成</li>
+      ※どちらもJavaScript内にCSSを書く技術
+    </ul>
+    <p>■vanilla-extractとは？</p>
+    <ul>
+      <li>TypeScriptを使用したCSS開発を行うためのライブラリ</li>
+      <li>Zero-Runtime CSS-in-JSである</li>
+      <li>Runtime CSS-in-JSであるEmotionとほぼ同じことが出来る</li>
+      <li>パフォーマンス、型安全性、開発効率の3拍子が揃っている</li>
     </ul>
     <h3>感想</h3>
     <P>CSSいつもべた書きだからやってみたい</P>
+    <h4>参考リンク</h4>
+    2023 , <a href="https://zenn.dev/mk668a/articles/6ef02b7ea8ba74">ゼロランタイムCSS in JSとは？結局、何を使えばいい？- 2024年のフロントエンド -</a>
+
     
     <h2 class="sectionTitleLine">発表：６人目（ゲストセッション）</h2>
     <h3>基本情報</h3>
@@ -181,35 +197,48 @@
       <tr><th>会社名</th><td>株式会社カオナビ</td></tr>
       <tr><th>題名</th><td>tsconfig.jsonの設定を見直そう！　 フロントエンド向け　2024夏</td></tr>
     </table>
-    <h3>発表概要</h3> 
+    <h3>発表概要</h3>
+    <p>この方は、おすすめのtsconfig.jsonの紹介でした。</p>
       <h3>tsconfig.jsonとは？</h3>
       <ul>
         <li>TypeScriptのコンパイラオプションなどを記載した設定ファイル</li>
         <li>Next.jsが勝手に作ってくれることもある</li>
       </ul>
       <h3>おすすめのオプション</h3>
-        <p>■moduleResolution:"bundler"</p>
+        <p>■moduleResolution</p>
         <ul>
-          <li>モジュール解決の方法を決める</li>
-          <li>nodeにするとNode.jsを再現する</li>
-          <li>builderはNode.jsを再現しつつ、拡張子を減らすことができる</li>  
+          <li>moduleResolutionとは、モジュール解決の方法を決めるオプション</li>
+          ※モジュール解決とは、importで指定されたモジュールがどのファイルか判定すること
+          <li>moduleResolution:"node"にするとNode.jsを再現する</li>
+          <li>moduleResolution:"builder"はwebpackなどのハンドラーの挙動を再現する。
+            Node.jsを再現しつつ、ESMの場合でも相対パスの拡張子を省略できる</li> 
+          ※webpackとは、モジュールをいくつかのファイルにまとめてくれる開発ツールのこと
+          <li>moduleResolution:"bundler"がおすすめ！</li>
         </ul>
-        <p>■baseUrlは削除しよう！</p>
+        <p>■baseUrl</p>
         <ul>
-          <li>余計なモジュール解決をしてしまうので、ない方がいい</li>
+          <li>baseUrlは削除しよう！</li>
+          <li>余計なモジュール解決をしてしまうことがあるので、ない方がいい</li>
         </ul>
         <p>■target</p>
         <ul>
-          <li>指定しているとそこまでしかサポートされない！</li>
-          <li>ブラウザでどこまでサポートしているか調べて出来る限新しくしよう！</li>
+          <li>ソースコードがどのバージョンをサポートしているかを指定するオプション</li>
+          <li>ブラウザでどこまでサポートしているか調べて出来る限り新しくしよう！</li>
         </ul>
-        <p>■momdule:"preserve"か、"exserve"にするといい</p>
+        <p>■momdule</p>
         <ul>
-          <li>moduleオプション</li>
-          <li>targetからmoduleだけを取り出した設定</li>
+          <li>moduleは、targetからmoduleだけを取り出した設定</li>
+          <li>momdule:"esnext"にすると純粋なES modules環境と解釈される</li>
+          <li>momdule:"preserve"は自由度が高い設定</li>
+          <li>momdule:"esnext" か "preserve" がおすすめ </li>
         </ul>
       <h3>感想</h3>
       <P>弊社のConfigファイルを見直してみたいと思った！</P>
+      
+    <h4>参考リンク</h4>
+    2024 , <a href="https://zenn.dev/sprout2000/articles/9d026d3d9e0e8f">いちばんやさしい webpack 入門</a>
+    2021 , <a href="https://e-words.jp/w/webpack.html">webpack</a>
+
 
   <h2 class="sectionTitleLine">おわりに</h2>
     <p>
