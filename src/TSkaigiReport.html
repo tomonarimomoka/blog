@@ -52,15 +52,15 @@
     <ul>      
       <li>プログラミングはほぼ独学</li>
       <li>学生時代はC#プログラマー</li>
-      <li>今はソフトフェアとして自社製品の製品開発を担当</li>
-      <li>使える言語はC# , Java , Python , Shell Script , TypeScript（勉強中）</li>
+      <li>今はソフトフェアエンジニアとして自社製品の製品開発を担当</li>
+      <li>使える言語はC# , Java , Python , Shell Script , node.js（勉強中） , TypeScript（勉強中）</li>
     </ul>
 
     <h2 class="sectionTitleLine">参加したイベント</h2>
     <p>
       <table > 
         <tbody>
-          <tr><th>イベント名</th><td>TsKaigi サブイベント#1</td></tr>
+          <tr><th>イベント名</th><td>TSKaigi Mashup #1 フロントエンド</td></tr>
           <tr><th>URL</th><td><a href="https://typescript-jpc.connpass.com/event/325001/">TSKaigi Mashup #1 フロントエンド</a></td></tr></tr>
           <tr><th>主催</th><td><a href="https://association.tskaigi.org/">一般社団法人TSKaigi Association</a></td></tr></tr>
           <tr><th>参加対象者</th><td>
@@ -83,12 +83,22 @@
     <table> 
     <h3>発表概要</h3>
     <p>この方は、自作ツールの紹介でした。</p>
+    
+    <p>■課題</p>
     <ul>
-      <li>ソースコードを一定のルールで上書きするツールを作った</li>
-      <li>プロジェクトの構成に基づく変更や型情報の利用ができるTypeScriptで作ることに</li>
-      <li>ソースコードのリファクタリングは、実装者は単調な作業で辛い</li>
-      <li>このツールを導入すると、レビュアーは「差分」ではなく、「差分を作る差分」になり楽</li>
-      <li>ポイントととして、汎用性ではなく、個別最適化を目指した。80%を目指して作った</li>
+      <li>ソースコードのリファクタリングが、実装者は単調な作業で辛い</li>
+    </ul>
+
+    <p>■システム概要</p>
+    <ul>
+      <li>ソースコードを一定のルールで上書きするツール</li>
+      <li>言語は、プロジェクトの構成に基づく変更や型情報の利用ができるTypeScript</li>
+      <li>ポイントは、汎用性ではなく個別最適化を目指し、80%の完成度を目指すこと</li>
+    </ul>
+
+    <p>■このツールを導入すると</p>
+    <ul>
+      <li>レビュアーは「差分」ではなく、「差分を作る差分」になり楽</li>
     </ul>
     <h3>感想</h3>
     <p>私は、本当にただ置換をするだけのツールを作ったことがあるが、TypeScriptで型情報などを利用して書き換えるのは面白いと思た。</p>
@@ -125,7 +135,7 @@
     <table>
       <tr><th>氏名</th><td>Fumiya Konno さん</td></tr>
       <tr><th>会社名</th><td>株式会社ICS</td></tr>
-      <tr><th>題名</th><td>私のことは嫌いになってもTypeScriptのことは嫌いにならないでください〜フロントエンドエンジニアがTypeScriptと仲良くなる方法〜</td></tr>
+      <tr><th>題名</th><td>私のことは嫌いになってもTypeScriptのことは嫌いにならないでください<br>〜フロントエンドエンジニアがTypeScriptと仲良くなる方法〜</td></tr>
     </table>
     <h3>発表概要</h3> 
     <p>この方は、初心者のための勉強法紹介でした。</p>
@@ -153,21 +163,35 @@
     </table>
     <h3>発表概要</h3> 
     <p>この方は、自作ツールの紹介でした。</p>
+    <p>■課題</p>
     <ul>
-      <li>テストをしっかり書きたい！ ⇒ テストデータを用意するのが大変 ⇒ ライブラリを作った</li>
-      <li>factory_bot（Rubyのテスト用ライブラリ） , factory_boy（Pythonのテスト用ライブラリ） のようなものを作りたい</li>
-      <li>Prismaのスキーマファイルから自動生成するのも作りたい ⇒ Prisma専用のライブラリも作った</li>
+      <li>テストをしっかり書きたいが、テストデータを用意するのが大変</li>
+    </ul>
+
+    <p>■システム概要</p>
+    <ul>
+      <li>factory_bot , factory_boy のようなものを目指した</li>
+      ※factory_botはRubyのテスト用ライブラリ、factory_boyはPythonのテスト用ライブラリ
+      <li>Prismaのスキーマファイルから自動生成するために、Prisma専用のライブラリも作った</li>
+    </ul>
+
+    <p>■現在は</p>
+    <ul>
       <li>個人開発で作っていたが、会社でも使っている</li>
     </ul>
+
     <h3>感想</h3>
     <p>個人開発で作ったものを会社でも使うなんて、、、凄すぎる！私もやってみたい！</p>
+    <h4>参考リンク</h4>
+    noteエンジニアの技術記事 , 2024 , <a href="https://engineerteam.note.jp/n/n81f69dabec13">テスト用のオブジェクトを簡単に作れるFactoryJSというライブラリを作った</a>
+
     
     <h2 class="sectionTitleLine">発表：５人目</h2>
     <h3>基本情報</h3>
     <table>
       <tr><th>氏名</th><td>おささ さん</td></tr>
       <tr><th>会社名</th><td>株式会社BLUEISH</td></tr>
-      <tr><th>題名</th><td>	[LT] 【App Router時代のスタイリング革命】Zero-Runtimeの理解とvanilla-extractという選択肢</td></tr>
+      <tr><th>題名</th><td>Zero-Runtimeの理解とvanilla-extractという選択肢</td></tr>
     </table>
     <h3>発表概要</h3>
     <p>この方は、vanilla-extractの紹介でした。</p>
@@ -240,10 +264,22 @@
     2021 , <a href="https://e-words.jp/w/webpack.html">webpack</a>
 
 
+  <h2 class="sectionTitleLine">LT会のすすめ</h2>
+  <p>
+    筆者はサーバーサイドエンジニアなので、フロントには詳しくなかったですが、意外と話についていくことができました。
+    また、分からないことはLT会後に調べることで見識を広げることができました。LT会では、聞く専でも、学ぶことがいっぱいあります。
+  </p>
+  <p>
+    ぜひ、LT会に参加して、日本のエンジニア業界を盛り上げていきましょう！
+  </p>
   <h2 class="sectionTitleLine">おわりに</h2>
     <p>
-      ここまで読んでくださった皆様は、LT会に参加したくなったのではないでしょうか？日本のエンジニア業界を盛り上げていきましょう！
+      ここまで読んでくださった皆様、ありがとうございます。
     </p>
+    <p>
+      そして、本記事の公開を許可してくださった登壇者の皆様に心より感謝申し上げます。
+    </p>
+
   </main>
   </body>
 </html>
