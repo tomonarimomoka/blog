@@ -117,21 +117,6 @@ blockquote cite{
   margin: 0px ;
   Display: block;
 }
-/* 表 */
-table {
-  margin:auto;
-  th {
-    background-color: rgb(239, 177, 250);
-    color: rgb(105, 105, 105);
-    padding: 10px 10px;
-    text-align: center;
-  }
-
-  td {
-    background-color: rgb(248, 221, 252);
-    padding: 10px 10px;
-  }
-}
 
 /* PC用UI */
 @media screen and (max-width: 1000px){
@@ -156,6 +141,21 @@ table {
   .btnArticleLink:hover {
     background: #545454;
     color: #ffffff;
+  }
+
+  table {
+    margin:auto;
+    th {
+      background-color: rgb(239, 177, 250);
+      color: rgb(105, 105, 105);
+      padding: 5px 0px;
+      text-align: center;
+    }
+  
+    td {
+      background-color: rgb(248, 221, 252);
+      padding: 5px 5px;
+    }
   }
 }
 /* スマホ用UI */
@@ -184,21 +184,13 @@ table {
     p{font-size: 18px;}
     ul{font-size: 18px;}
     ol{font-size: 18px;}
-    table{font-size: 18px;}
-
     table {
-      margin:auto;
-      th {
-        background-color: rgb(239, 177, 250);
-        color: rgb(105, 105, 105);
-        padding: 5px 0px;
-        text-align: center;
-      }
-    
-      td {
-        background-color: rgb(248, 221, 252);
-        padding: 5px 5px;
-      }
+      border-collapse: collapse;
+      border: solid 2px rgb(239, 177, 250);/*表全体を線で囲う*/
+    }
+    table th, table td {
+      border: solid 1px rgb(239, 177, 250);
+      font-size: 18px;
     }
 }
 
