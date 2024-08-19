@@ -119,13 +119,8 @@ blockquote cite{
 }
 
 /* PC用UI */
-@media screen and (max-width: 1000px){
+@media only all and (min-width:600px) {   
   .imgBigSize{width: 90%;}
-  #articleTitle{ font-size: 50px; }
-}
-@media only all and (max-width: 1000px) and (min-width:600px) {
-    /*任意のスタイルを記述する*/
-   
   #articleTitle{ font-size: 32px; }
   .btnArticleLink{
     display: inline-block;
