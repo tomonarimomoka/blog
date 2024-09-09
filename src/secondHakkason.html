@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <link rel="icon" href="../素材/favicon.ico">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LG6VXEVGW8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-LG6VXEVGW8');
+  </script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2761899560206236" crossorigin="anonymous"></script>
+
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+</head>
+<body>
+  <!-- ヘッダー高さ分の余白   -->
+  <div class="header-box"></div>
+  <header>
+    <nav class="pc-menu">
+      <ul class="header-ul">
+        <li class="header-li"><a href="/index.html" class="header-a">HOME</a></li>
+        <li class="header-li"><a href="/list-tech.html" class="header-a">ARTICLE</a></li>
+        <li class="header-li"><a href="/privacyPolicy.html" class="header-a">PRIVACY</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main class="box">
+    
+    <h1 id="articleTitle">生成AI系ハッカソン参加レポート</h1>
+    <div class="right">
+      🕓本記事の最終更新日は
+      <time id="modify"></time>
+      です。
+      <script>
+        /* 更新日の取得 */
+        const last = new Date(document.lastModified);
+        const year = last.getFullYear();
+        const month = last.getMonth() + 1;
+        const date = last.getDate();
+        /* 日付を書き換える */
+        const target = document.getElementById('modify');
+        target.textContent = year + '-' + month + '-' + date;
+      </script>
+    </div>
+    
+    <h2 class="sectionTitleLine">筆者のスペック</h2>
+    <ul>      
+      <li>プログラミングはほぼ独学</li>
+      <li>学生時代はプログラマー</li>
+      <li>今はソフトフェアとして自社製品の製品開発を担当</li>
+      <li>使える言語はC# , Java , Python , Shell Script , React×TypeScript（勉強中）</li>
+      <li>ハッカソンは2回目</li>
+    </ul>
+
+    <h2 class="sectionTitleLine">参加したイベント</h2>
+    <p>
+      <table >
+        <tbody>
+          <tr><th>イベント名</th><td>シンプルな生成 AI ハッカソン #4</td></tr>
+          <tr><th>URL</th><td><a href="https://simpleform.connpass.com/event/321475/">シンプルな生成 AI ハッカソン #4</a></td></tr></tr>
+          <tr><th>主催</th><td><a href="https://www.simpleform.co.jp/">SimpleForm</a></td></tr></tr>
+          <tr><th>参加対象者</th><td>「プログラマもしくはデザイナであればどなたでも参加いただけます！」</td></tr>
+        </tbody>
+      </table>
+    </p>
+
+    <h2 class="sectionTitleLine">技術選定</h2>
+    <p>我々はPython × Streamlitで作りました。ソース管理はGitHubです。</p>
+    <p>■言語</p>
+    <p>
+      Pythonを選んだ理由は、「とりあえずPythonだよね」みたいな軽い感じで決まりました。
+    </p>
+    <p>■フレームワーク</p>
+    <p>
+      Streamlit（読み方：ストリームリット）というフレームワークを採用しました。
+      これは私がごり押ししてやらせてもらいました。
+      なぜStreamlitを使いたかったかというと、私が以前ハッカソンに参加した際にStreamlitを使っているチームがあり、フロントの開発がすごく楽と聞き、そのチームの成果物のUIも綺麗だったので、興味を持ったからです。
+    </p>
+    <p>■ソース管理</p>
+    <p>
+      ソース管理はほとんどの場合がGitHubなので、使ったことない人は練習しておきましょう。<br>
+      <a href="/src/howToUseGit.html">はじめてのGit</a>でGitの使い方を解説していますので、確認しておきましょう！
+    </p>
+    
+    <h2 class="sectionTitleLine">私たちのチームが作ったもの</h2>
+    <p>私たちが作ったのはニュースをポジティブにするwebアプリケーションです。以下のようなフローで作成しました</p>
+    <ol>      
+      <li>ニュースのURLを入力</li>
+      <li>URLの記事の内容を取得</li>
+      <li>プロンプトを作る</li>
+      <li>API叩く</li>
+      <li>結果表示</li>
+    </ol>
+
+    <h2 class="sectionTitleLine">動的にプロンプトを作る</h2>
+    <P>私は以下のようにして動的にプロンプトを作りました。</p>
+
+      <pre><code class="codeBlock">
+# 　GPTへ渡す情報
+model_name = "gpt-4o-mini"
+role = "あなたはプロの心理カウンセラーです。\n"
+prompt = f"""以下の手順で、記事の内容をポジティブにしてください。
+【手順1】
+例えば、以下の様にポジティブな表現に変えてください。この時に、引用された発言は書き換えてはいけません。。
+・「積極性に欠ける」は「控えめな性格」
+・「頭が悪い」は「天然」
+・「貧乏」は「清貧」
+・「忙しい」は「充実している」
+Let's think step by step.
+【手順２】
+例えば、以下の様に過激な表現やグロテスクな表現は柔らかい表現に変更して下さい。
+・「殺す」は「天国へ導いた」
+【手順4】
+見出しは作らずにポジティブ化したニュースをプレーンテキストで出力してください。
+【手順4】
+出力言語は{language}にしてください。
+【手順5】
+・出力言語が日本語の場合、語尾は「なんだよ💓♡」や「だよ」や「だって～！」とか「らしいよ✨」とか「～🍀」にしてください。
+・語尾が絵文字の時は「。」を削除してください。
+・出力言語が日本語以外の場合は「♡」とか「★」とか「😊」とか「💕」や「🍀」を使ってください。
+【手順7】
+最後に注意点です。{language}に直して表示してください。
+## 記事
+{article["body"]}
+"""
+    
+    </code></pre>
+    <p> 工夫した点としては、入力値がからでもプロンプトが崩れずに正しく作れるようにしたことです。
+      それから、ほかのメンバーにもmakePromptForCatchcopy関数を基に関数を作ってもらうようにしたので、読みやすさには気を付けました。
+    </p>
+    <p>makepromptForLP関数は、ハッカソン当日はかなりChatGPTの作るデザインにバラつきが出たので、後日、改修してみました。</p>
+    <p>ちなみに、関数名を誉められました✨プロンプトの綴りを間違えて指摘されたりもしました(笑) ← えいごにがて</p>
+    
+    <h2 class="sectionTitleLine">成果物</h2>
+    <h3>ペルソナ入力ページ</h3>
+    <p>このページでペルソナの情報を入力させます。</p>
+    <img src="../素材/ペルソナ入力ページ.png" class="imgMidleSize" alt="ペルソナ入力ページ">
+    <h3>生成されたLP</h3>
+    <p>
+      ジャーン！！！いかがでしょうか？
+    </p>    
+    <p>
+      もちろん、手直しは必要だと思いますが、ボタン一つでこれが生成されるのです。 とても面白いですよね！！！！
+      生成AIの可能性を感じます。プロンプトを作るところもシステムで持てば、エンドユーザーはプロンプトエンジニアリングの知識すら必要ありません。
+    </p>
+    <img src="../素材/生成されたLP.png" class="imgFullgSize" alt="生成されたLP">
+
+    <h2 class="sectionTitleLine">おわりに</h2>
+    <p>
+      ハッカソン、本当に楽しかったです！！
+    </p>
+    <p>
+      設計書作成やお偉いさんとの話し合いやテストなど、本当は好きじゃないことは抜いて、楽しいアイディア出しと開発だけをできるのです！！楽しいに決まっていますね✨
+    </p>
+    <p>
+      普段お仕事で使わない言語に触れるチャンスにもなりますし、自分の会社以外のエンジニアと交流するのも楽しい＆勉強になります😌
+      開発さえできればだれでも参加できる場合がほとんどなので、是非お勧めします。
+    </p>  
+    <p>
+      最後まで読んでくださり、ありがとうございました。
+    </p>
+  </main>
+  <script>hljs.highlightAll();</script>
+  </body>
+</html>
