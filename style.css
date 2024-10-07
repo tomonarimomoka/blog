@@ -73,6 +73,25 @@
     color: #ffffff;
   }
 
+  /* 文中リンクボタン */
+  .btnArticleLinkInText{
+    padding: 3px;
+    /* margin: 5px; */
+    border-radius: 10px;
+    transition: .4s;
+
+    border: solid 2px #6d6d6d;
+    color: #6d6d6d;
+
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  .btnArticleLinkInText:hover {
+    background: #6d6d6d;
+    color: #ffffff;
+  }
+
   /* ナビゲーションバー */
   header {
     position: fixed;
