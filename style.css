@@ -128,11 +128,11 @@
   }
   
   /* 資格 */
-  .lisenceImage{width: 30%;}
-  .imgFullgSize{width:100%;margin: 0px;padding: 0px;}
-  .imgBigSize{width:60%;margin: 0px;padding: 0px;}
-  .imgMidleSize{width:30%;}
-  .imgMidleSizeSmall{width:20%;}
+  .imgSize_100{width:100%;margin: 0px;padding: 0px;}
+  .imgSize_60{width:60%;margin: 0px;padding: 0px;}
+  .imgSize_40{width:40%;}
+  .imgSize_30{width:30%;}
+  .imgSize_20{width:20%;}
 
 /* 引用文 */
 blockquote{
