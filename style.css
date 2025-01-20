@@ -175,12 +175,10 @@ blockquote cite{
   .imgBigSize{width: 90%;}
   #articleTitle{ font-size: 32px; }
   table {
-    margin:auto;
     th {
       background-color: rgb(239, 177, 250);
       color: rgb(105, 105, 105);
-      padding: 5px 0px;
-      text-align: center;
+      padding: 5px 5px;
     }
   
     td {
