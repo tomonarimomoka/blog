@@ -129,10 +129,15 @@
   
   /* 画像クラス */
   .imgSize_100{width:100%;margin: 0px;padding: 0px;}
+  .imgSize_90{width:90%;margin: 0px;padding: 0px;}
+  .imgSize_80{width:80%;margin: 0px;padding: 0px;}
+  .imgSize_70{width:70%;margin: 0px;padding: 0px;}
   .imgSize_60{width:60%;margin: 0px;padding: 0px;}
+  .imgSize_50{width:50%;margin: 0px;padding: 0px;}
   .imgSize_40{width:40%;}
   .imgSize_30{width:30%;}
   .imgSize_20{width:20%;}
+  .imgSize_10{width:10%;}
 
 /* 引用文 */
 blockquote{
